@@ -62,6 +62,22 @@ router.get('/profile/remove', (req, res) => {
 	})
 })
 
+router.get('/profile/input', (req, res) => {
+	Profile.create(req.query)
+	.then(profile => {
+		res.json({
+			confirmation: 'success',
+			data: profile
+		})
+	})
+	.catch(err => {
+		res.json({
+			confirmation: 'fail',
+			message: err.message
+		})
+	})
+})
+
 router.get('/profile/:id', (req, res) => {
 	const id = req.params.id
 
@@ -80,9 +96,7 @@ router.get('/profile/:id', (req, res) => {
 	})
 })
 
-
 router.post('/profile/input', (req, res) => {
-
 	Profile.create(req.body)
 	.then(profile => {
 		res.json({
@@ -98,21 +112,5 @@ router.post('/profile/input', (req, res) => {
 	})
 })
 
-router.get('/profile/input', (req, res) => {
-
-	Profile.create(req.query)
-	.then(profile => {
-		res.json({
-			confirmation: 'success',
-			data: profile
-		})
-	})
-	.catch(err => {
-		res.json({
-			confirmation: 'fail',
-			message: err.message
-		})
-	})
-})
 
 module.exports = router

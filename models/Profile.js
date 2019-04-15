@@ -6,7 +6,7 @@ const Profile = new mongoose.Schema({
     school: {type:String, trim:true, default:''},
     city: {type:String, trim:true, default:''},
     state: {type:String, trim:true, default:'KS'},
-    interests: {type:String, trim:true, default:''},
+    interests: {type:String, trim:true, default:''}
 })
 
 module.exports = mongoose.model('Profile', Profile)
