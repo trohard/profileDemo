@@ -33,6 +33,13 @@ const app = vertex.app(config) // initialize app with config options
 const index = require('./routes/index')
 const api = require('./routes/api')
 
+//Cross-Origin Resource Sharing (CORS)
+app.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+  });
+
 // set routes
 app.use('/', index)
 app.use('/api', api) // sample API Routes
