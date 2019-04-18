@@ -4,7 +4,7 @@ Test <span class="T4">S</span>erver for <span class="T4">P</span>rofile <span cl
 
 [https://profiles-7xngsv.turbo360-vertex.com/](https://profiles-7xngsv.turbo360-vertex.com/)
 
-<span class="T1">Field names for data</span> <span class="T3"></span> (case matters!):
+##Field names for data (case matters!):
 
 firstName
 
@@ -18,13 +18,13 @@ state
 
 interests
 
-<span class="T1">API for</span> <span class="T2">accessing data:</span>
+##API for accessing data:
 
 Show all entries:
 
 <URL>/api/profile
 
-Show only entries that match <span class="T7">a</span> query <span class="T7">string</span>
+##Show only entries that match query string
 
 <URL>/api/profile?<field name>=<string>
 
